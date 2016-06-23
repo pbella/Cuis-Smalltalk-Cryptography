@@ -494,7 +494,7 @@ rounds: data
 	ggA:B:C:D:M:S:T:
 	hhA:B:C:D:M:S:T:
 	iiA:B:C:D:M:S:T:
-	) doWithIndex: [ :selector :index |
+	) withIndexDo: [ :selector :index |
 		self round: data selector: selector round: index.]
 ! !
 

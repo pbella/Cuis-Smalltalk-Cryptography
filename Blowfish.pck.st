@@ -698,7 +698,7 @@ testDecryption
 |key data res|
 key:='abcdefghijklmnopqrstuvwxyz'.
 data:=WordArray  new: 2.
-#(16r324ED0FE  16rF413A203) doWithIndex: [:each :i | data at: i put: ((each asByteArray) unsignedLongAt: 1 bigEndian:true)    ].
+#(16r324ED0FE  16rF413A203) withIndexDo: [:each :i | data at: i put: ((each asByteArray) unsignedLongAt: 1 bigEndian:true)    ].
 
 res:=(Blowfish decrypt: data with:  key asByteArray ).
 
@@ -720,7 +720,7 @@ testEncryption
 |key data res|
 key:='abcdefghijklmnopqrstuvwxyz'.
 data:=WordArray  new: 2.
-#(16r424C4F57 16r46495348) doWithIndex: [:each :i | data at: i put: ((each asByteArray) unsignedLongAt: 1 bigEndian:true)    ].
+#(16r424C4F57 16r46495348) withIndexDo: [:each :i | data at: i put: ((each asByteArray) unsignedLongAt: 1 bigEndian:true)    ].
 res:=(Blowfish encrypt: data with:   key asByteArray).
 
 
